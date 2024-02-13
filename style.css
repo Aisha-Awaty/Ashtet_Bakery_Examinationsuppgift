@@ -1,0 +1,446 @@
+/************************************ Fonts***********************************/
+@font-face {
+  font-family: Cabin-regular;
+  src: url("fonts/cabin-regular-webfont.woff"),
+    url("fonts/cabin-regular-webfont.woff2");
+}
+@font-face {
+  font-family: Pacifico;
+  src: url("fonts/pacifico-webfont.woff"), url("fonts/pacifico-webfont.woff2");
+}
+
+@font-face {
+  font-family: Robotocondensed-regular;
+  src: url("fonts/robotocondensed-regular-webfont.woff"),
+    url("fonts/robotocondensed-regular-webfont.woff2");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* wrapper class som har alla ....*/
+.wrapper {
+  width: 1300px;
+  /* så att det kan vara centrerd*/
+  margin: 0 auto;
+  font-family: Robotocondensed-regular;
+
+  background-image: url(images/Background.svg);
+  background-repeat: repeat;
+}
+
+/***********************************************Header********************************************/
+header.main {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* positionering av element så att vi kan använda z-index */
+}
+
+/* inehåller logotypen och navigationen */
+.logo-nav {
+  background-color: #ecb6a991;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2; /*  högre z-index för att placera den ovanför .banner */
+}
+.logo img {
+  height: 100px;
+  border-radius: 10%;
+}
+/* Navigering */
+nav ul {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+  list-style: none;
+  justify-content: space-between;
+}
+nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav li:last-child {
+  margin-right: 20px;
+}
+li a {
+  color: white;
+  text-decoration: none;
+}
+.nav-button:hover {
+  background-color: #bf9288;
+}
+/* dölj Burger-menyn i visningsportar som är bredare än 750px */
+.burger {
+  display: none;
+  margin-right: 20px;
+}
+
+/* innehåller banner videon och en fras*/
+.banner {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* placerar .banner klassen absolut inom sin förälder .header.main */
+  /* Rikta in toppen av .banner med toppen,vänster,höger och botten av dess förälder */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /*lägre z-index för att placera den bakom .logo-nav*/
+}
+
+.banner video {
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.banner p {
+  position: absolute;
+  z-index: 2;
+  background-color: #ecb6a991;
+  color: #59403b;
+  padding: 1rem;
+  font-family: Pacifico;
+  font-size: 60px;
+  bottom: 0; /* Position at the bottom of the .banner */
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0%;
+}
+
+/************************************ Main*********************************/
+main {
+  position: relative;
+  z-index: 1;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.headline h1 {
+  text-align: center;
+  color: #59403b;
+  font-family: Pacifico;
+}
+.headline {
+  padding: 2rem;
+}
+.items {
+  column-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "pr1 pr2 pr3 pr4 "
+    "pr5 pr6 pr7 pr8"
+    "pr9 pr10 pr11 pr12";
+  justify-content: center; /* Center the grid items horizontally */
+  align-items: center; /* Center the grid items vertically */
+}
+.pr-1 {
+  grid-area: pr1;
+}
+.pr-2 {
+  grid-area: pr2;
+}
+.pr-3 {
+  grid-area: pr3;
+}
+.pr-4 {
+  grid-area: pr4;
+}
+.pr-5 {
+  grid-area: pr5;
+}
+.pr-6 {
+  grid-area: pr6;
+}
+.pr-7 {
+  grid-area: pr7;
+}
+.pr-8 {
+  grid-area: pr8;
+}
+.pr-9 {
+  grid-area: pr9;
+}
+.pr-10 {
+  grid-area: pr10;
+}
+.pr-11 {
+  grid-area: pr11;
+}
+.pr-12 {
+  grid-area: pr12;
+}
+
+/*****enskilda produkter******/
+.sections {
+  max-width: 297px;
+  background-color: #ecb6a969;
+  border-radius: 5%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s; /*för smidig färgändring */
+}
+
+.product-image {
+  height: 280px;
+  padding: 1rem;
+  border-radius: 10%;
+  grid-area: image;
+  margin-bottom: 0;
+}
+.product-name {
+  grid-area: name;
+  font-family: Cabin-regular;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.produc-price {
+  margin-top: 0;
+  grid-area: price;
+}
+/* product hover effect */
+.sections:hover {
+  background-color: #bf9288;
+}
+
+/**************************************************Footer*******************************************************/
+
+footer.main {
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #ecb6a991;
+  color: #59403b;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    " fo-1 fo-2 fo-3 fo-5 "
+    "fo-4 fo-4 fo-4 fo-4"
+    "fo-6 fo-6 fo-6 fo-6";
+}
+.footer-nav {
+  grid-area: fo-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-contact {
+  grid-area: fo-2;
+  display: flex;
+  align-items: center;
+}
+.footer-follow {
+  grid-area: fo-3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: fo-4;
+}
+.address {
+  grid-area: fo-5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.copy-right {
+  grid-area: fo-6;
+  text-align: center;
+}
+
+/*******Form stil*******/
+
+#subscribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+#subscribe-form input[type="email"] {
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #59403b;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+#subscribe-form button,
+.nav-button {
+  padding: 12px;
+  background-color: #eaa7b4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#subscribe-form button:hover {
+  background-color: #bf9288;
+}
+
+.footer-nav ul {
+  list-style: inside;
+}
+
+.footer-nav ul a {
+  color: #59403b;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.socials-logo {
+  width: 24px;
+  margin-right: 5px;
+  vertical-align: middle;
+  color: #59403b;
+}
+
+/********************************** Breaking points ***************************************************/
+@media (max-width: 1320px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1230px) {
+  .items {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "pr1 pr2 pr3  "
+      "pr4 pr5 pr6 "
+      "pr7 pr8 pr9 "
+      "pr10 pr11 pr12";
+  }
+}
+/* när den maximala bredden är 950 pixlar minska typsnittstorleken till 50 pixlar för .banner p, main objektens justeras i två kolumner och sidfotens innehåll i tre kolumner. */
+@media (max-width: 950px) {
+  .banner p {
+    font-size: 50px;
+  }
+  .items {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "pr1 pr2   "
+      "pr3 pr4  "
+      "pr5 pr6"
+      "pr7 pr8"
+      " pr9 pr10 "
+      "pr11 pr12";
+  }
+
+  footer.main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      " fo-1 fo-2 fo-3  "
+      "fo-4 fo-4 fo-5 "
+      "fo-6 fo-6 fo-6 ";
+  }
+}
+/* när den maximala bredden är 750 pixlar minska typsnittstorleken till 40 pixlar för .banner p, menyn försvinner och hamburgermenyn visas istället och sidfotens innehåll i tre kolumner. */
+@media (max-width: 750px) {
+  .banner p {
+    font-size: 40px;
+  }
+  .burger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+  footer.main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      " fo-1 fo-2  "
+      " fo-3 fo-5 "
+      "fo-4 fo-4"
+      "fo-6 fo-6";
+  }
+}
+/* när den maximala bredden är 620 pixlar minska typsnittstorleken till 30 pixlar för .banner p, main objektens justeras i en kolumn och sidfotens innehåll i tre kolumner. */
+/* 620px funkar bäst för min design som en breakpoint istället för 500px men det är fortfarande optemal för 500px */
+@media (max-width: 620px) {
+  .banner p {
+    font-size: 30px;
+  }
+  .items {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pr1  "
+      " pr2"
+      "pr3  "
+      "pr4 "
+      "pr5 "
+      "pr6"
+      "pr7 "
+      "pr8"
+      " pr9  "
+      "pr10"
+      "pr11 "
+      "pr12";
+  }
+  footer.main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      " fo-1   "
+      "fo-2"
+      " fo-3  "
+      "fo-5"
+      "fo-4 "
+      "fo-6";
+  }
+}
+
+/****************************** Analys text ************************/
+.analys-text {
+  background-color: #f8f5f1;
+}
+/* .analys-header {
+} */
+.texterea {
+  line-height: 180%;
+  max-width: 75ch;
+  margin: 0 auto;
+}
+.texterea p + p {
+  padding: 1rem;
+}

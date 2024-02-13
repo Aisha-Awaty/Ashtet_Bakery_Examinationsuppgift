@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Examinationuppgift" />
+    <meta name="author" content="Aisha Awaty" />
+    <title>Analys</title>
+
+    <link rel="stylesheet" href="normalize.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="main">
+        <div class="logo-nav">
+          <div class="logo">
+            <a href="index.html"
+              ><img
+                src="images/logo-1.svg"
+                alt="logo image containing a slice of cake and a text that says Ashtet home bakery"
+            /></a>
+          </div>
+
+          <nav>
+            <button class="nav-button burger">
+              <img src="images/menu_white_24dp.svg" alt="menu three lins" />
+            </button>
+            <ul>
+              <li class="nav-button base"><a href="">Cakes</a></li>
+              <li class="nav-button base"><a href="">Cupcakes</a></li>
+              <li class="nav-button base"><a href="">Cookies</a></li>
+              <li class="nav-button base"><a href="analys.html">Analys</a></li>
+              <li class="nav-button base"><a href="">Contact us</a></li>
+              <li class="nav-button base">
+                <a href=""
+                  ><img
+                    src="images/shopping_cart_white_24dp.svg"
+                    alt="shopping_cart_white"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="banner">
+          <p>
+            Indulge in Sweet Moments:<br />
+            Irresistible Cakes for Every Occasion
+          </p>
+
+          <!-- autoplay: This attribute allows the video to start playing as soon as it's loaded.
+                loop: This attribute makes the video loop continuously.
+                muted: This attribute ensures that the video plays without sound.
+                playsinline: This attribute is used for mobile devices to allow the video to play inline (within the element) rather than going fullscreen. -->
+          <video autoplay loop muted playsinline>
+            <source
+              src="images/Brown Cake Decoration Baker Promotion Video (1300 x 600 px).mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </header>
+      <main>
+        <div class="analys-text">
+          <div class="analys-header">
+            <h1>Analystext av Aisha Awaty</h1>
+            <h2>Examinationsuppgift i HT23 LP1</h2>
+            <h2>2023-11-5</h2>
+          </div>
+          <div class="texterea">
+            <h2>1. Inledning</h2>
+            <p >
+              Uppgiftens syfte är att vi ska träna på de kunskaper som ve lärde
+              os under kursen samt vi ska bevisa vår uppfattning till
+              kunskaparna genom att bygga en korrekt och väl tänkt webbplats med
+              användning av HTML och CSS.
+            </p>
+            <h2>2. Programmeringsval</h2>
+            <h3>2.1. HTML5</h3>
+            <p>
+              Enligt Faraon & Holmberg(2022) semantisk struktur är den fokus på HTML5 samt information som är meningsfulla och detta genom att märka upp den förväntade innehållet i en webbsida då blir det enklare att identifiera den centrala innehållet på webbsidan.
+            </p>
+            <p>
+              För att illustrera varför används, den traditionella HTML använder många div-taggar. Nu kan det enkelt utvecklas med de nya taggarna som inkluderar nav, header och footer. Detta gör HTML mer produktivt.
+            </p>
+            <p>
+              En annan anledning är att HTML5 anses vara framtidens teknologi enligt Articles Network(2023) detta förklarades med att teknologin inom webbutveckling utvecklas med varje dag som går. Enligt statistik har ungefär 60% av utvecklare redan använt HTML5 för att utveckla stora projekt. Nästan 20% av utvecklare inom mobila appar använder nu traditionell teknologi mindre än tidigare. Det blir tydligt att HTML5 blir det nya plattformsvalet. Det är bara en tidsfråga innan utveckling med HTML5 överskuggar alla andra nativa utvecklingsmetoder. 
+            </p>
+            <h3>2.2. CSS-reset</h3>
+            <p>
+              Webbläsare använder sina egna inbyggda stilmallar, vilket kan leda
+              till variationer i hur en webbsida visas beroende på webbläsaren,
+              förklarar HV Christian Ohlsson (2023). För att åtgärda detta
+              problem används en CSS-reset, vilket återställer alla
+              standardvärden för HTML-taggar och gör att webbsidan ser enhetlig
+              ut oavsett vilken webbläsare som används. Jag har valt att använda
+              Normalize.css eftersom det är en av de mest använda
+              CSS-reset-filerna och återställer taggarna till vanliga
+              standardvärden.
+            </p>
+            <h3>2.3. Box-model</h3>
+            <p>
+              Med tanke på att varje element i CSS behandlas som en box, har jag valt att använda boxmodellen 'border-box,' där både padding och border inkluderas i elementets totala höjd och bredd. Detta säkerställer att elementens storlek beräknas på ett förväntat sätt, skriver Faraon & Holmberg(2022).
+            </p>
+            <p>
+              Vidare har jag utforskat positioneringsegenskapen i CSS, och jag har använt både relativ och absolut positionering. Detta har möjliggjort användningen av z-index, vilket ger mig kontroll över hur elementen staplas i förhållande till varandra. Till exempel har jag i min CSS-stilmall tilldelat elementen med klassen .banner en lägre z-index än elementen med klassen .logo-nav. Detta resulterar i att .banner hamnar bakom .logo-nav, vilket innehåller navigeringen och logotypen med en högre z-index-värde. 
+            </p>
+            <p>
+              På samma sätt har jag gett huvudsektionen 'main' en lägre z-index för att placera den under .banner. Denna användning av z-index ger mig möjligheten att skapa visuella hierarkier och anpassa placeringen av elementen i webbsidan.
+            </p>
+            <h3>2.4.	Enheter</h3>
+            <p>I min webbplats har jag använt olika enheter för att definiera storlekar och layout. Den mest använda enheten är pixel (px). Jag har använt pixlar för att bestämma logotypens storlek och för att sätta exakta mått, som bredden på min .wrapper. Jag har även använt pixlar för att definiera padding och marginaler, vars värden jag inte vill ändra. Faraon & Holmberg(2022)Påpekar fördelarna med att använda pixlar att de ger stabila storlekar som inte påverkas av skärmupplösningen.</p>
+            <p>Jag har även använt procent (%) som enhet för att ange höjd och bredd i vissa fall. Till exempel, om viewporten är 1300px bred, kommer .wrapper att vara 100% i bredd baserat på föräldradelementets storlek.</p>
+            <p>En annan enhet som jag har använt är rem, vilket står för "root em" och vanligtvis motsvarar 16 pixlar. Rem är användbart för att skala text och element relativt till grundstorleken på rotelementet. Det ger flexibilitet i att anpassa storlekar beroende på webbläsarens inställningar.</p>
+          <h2>3.	Layout</h2>
+          <h3>3.1.	Navigation</h3>
+          <p>För att skapa en navigationsmeny på min webbplats valde jag att använda en oordnad lista (<ul>), vilket ansågs vara en praktisk och semantiskt korrekt metod. Jag placerade denna lista inom en (<nav>)-tagg, som följer HTML5-standarder för att markera navigationsinnehåll. För att anpassa layouten och placera menyalternativen i en horisontell rad, använde jag Flexbox, vilket möjliggör en responsiv och snygg utformning.</p>
+          <p>För att säkerställa en enhetlig design och utseende för mina navigationsknappar använde jag en gemensam klass kallad .nav-button, som delade egenskaper med en annan klass som heter button. Genom att göra detta uppnådde jag enhetlighet i hela webbplatsens knappdesign.Genom att följa dessa metoder har jag strukturerat och utformat min navigationsmeny på ett sätt som gynnar användarupplevelsen och följer bästa inom webbdesign tipsen.</p>
+          <h3>3.2.	Sidfot</h3>
+          <p>Webbplatsens foton var uppdelade i sex sektioner, och varje sektion tilldelades en unik klass för enklare hantering i CSS-filen. Den första sektionen var en sekundär navigationsmeny med samma alternativ som huvudnavigeringen, men den var utformad vertikalt och använde samma färgtema som de andra sektionerna i footerdelen.</p>
+          <p>I den andra sektionen, kontaktsektionen, inkluderade jag adress- och telefonnummerinformation och använde även ikoner för att tydliggöra informationen. Varje sektion hade en (<h2>)-rubrik för att beskriva innehållet som följde.</p>
+          <p>Den tredje sektionen innehöll länkar till sociala medieplattformar tillsammans med motsvarande ikoner. I den fjärde sektionen integrerade jag en prenumeration för webbplatsens nyhetsbrev med ett formulär där besökare kunde ange sin e-postadress och en prenumerationsknapp. Denna del av webbplatsen använde de koncept som vi lärt oss under kursen om formulärhantering.</p>
+          <p>
+            Den femte sektionen innehöll adressinformation, medan den sjätte och sista sektionen var en vanlig sektion med en (<p>)-tagg som innehöll upphovsrättsinformation.
+            </p>
+            <h3>3.3.	Css Grids</h3>
+          <p>Jag använde CSS Grid-layout på flera platser på webbplatsen. Först och främst använde jag det i produktsektionen, där jag visade produkter i fyra kolumner. Dessutom använde jag Grid-layout i footerdelen för att dela upp den i fyra kolumner.</p>
+          
+          <p>som noteras i Webibazaar (2023),  Med hjälp av CSS Grid kan utvecklare definiera rader och kolumner för att skapa en rutnätlayout som anpassar sig till olika skärmstorlekar och enheter. Detta gör det enklare att skapa flexibla och responsiva designer utan att behöva använda komplexa medieförfrågningar eller JavaScript. En av fördelarna med att använda Grid är att sektionerna enkelt kan delas upp och hanteras med hjälp av grid-områden. Till exempel, när vi behöver anpassa layouten för olika skärmstorlekar, kan vi enkelt justera grid-områdena för att säkerställa att webbplatsen ser bra ut på olika enheter.</p>
+            <h3>3.4.	Flexbox</h3>
+          <p>Jag använde Flexbox på flera ställen på webbplatsen, inklusive produktsidan, footern och navigationsdelen. Användningen av Flexbox förenklade layouthanteringen och gjorde det möjligt att skapa flexibla och responsiva layouter. Flexbox ger bättre kontroll över elementens placering och reaktion på skärmstorleksändringar, vilket resulterade i en enhetlig och användarvänlig design.</p>
+          <h3>3.5.	Läsbarhet</h3>
+          <p>För att förbättra läsbarheten på webbplatsen har jag använt mig av flera tekniker:</p>
+<ul>
+  <li>
+    <p>Line Height (Radavstånd): Jag har ökat radavståndet (line height) till 180%. Detta skapar mer utrymme mellan textstyckena och förbättrar läsbarheten genom att undvika trånga textblock.</p>
+  </li>
+  <li>
+    <p>Kontrastförbättring: Jag har justerat bakgrundsbilden för att öka kontrasten mellan text och bakgrundsfärgen. Detta gör texten tydligare och mer läsbar.</p>
+  </li>
+  <li>
+    <p>Typsnittsval: Jag har valt ett läsbart och tydligt typsnitt för att säkerställa att texten är lättläst. Ett välvalt typsnitt är avgörande för att göra innehållet tillgängligt och lockande för läsare.</p>
+  </li>
+</ul>
+<h3>3.6.	Typsnitt</h3>
+<p>Att använda en kombination av typsnitt i webbdesign. Som att använda ett handskrivet typsnitt för rubriker och ett sans-serif-teckensnitt för brödtext. Detta kan skapa en balanserad och visuellt tilltalande design.</p>
+<p>Jag valde typsnittet "Pacifico" med handskriven stil till min bageri-webbplats för att ge den en personlig och inbjudande känsla , och jag använde det både för bannertexten och H1-texten. Detta typsnitt balanserar läsbarhet med en mysig atmosfär, vilket passar perfekt för en webbplats om bakning.</p>
+<p>ag valde typsnittet "Roboto Condensed-regular" för brödtext och "Cabin-regular" för H2-text eftersom de kändes moderna och passade designen. Sans-serif-teckensnitt är kända för sin renhet och enkelhet, och de är vanligtvis mer lättlästa på digitala skärmar. Detta gjorde "Roboto Condensed-regular" till ett utmärkt val för att säkerställa läsbarheten på webbplatsen.
+
+</p>
+<h2>Referenser</h2>
+<p>Web Design, What are the benefits and challenges of using SVG for web design?.[online].https://www.linkedin.com/advice/0/what-benefits-challenges-using-svg-web-design-skills-web-design#:~:text=Benefits%20of%20SVG&text=This%20means%20that%20they%20can,with%20gzip%20or%20other%20tools.[2023.10.31]</p>
+<p>Faraon, M., Holmberg, L.(2022).Introduktion till HTML och CSS. 1. uppl. Lund: Studentlitteratur.</p>
+<p>Articles Network. (2023). Reasons Why HTML5 Is The Future. [online] Tillgänglig: https://www.linkedin.com/pulse/reasons-why-html5-future-articles-network/?trk=pulse-article_more-articles_related-content-card [2023.11.4].</p>
+<p>HV Christian Ohlsson (2023). WUH100 2023 15.5 CSS Reset. [Video online] Tillgänglig: https://www.youtube.com/watch?v=uR7dJnFwF4c&t=417s. [2023.10.17].</p>
+<p></p>
+<p>Webibazaar (2023). The Benefits Of Using CSS Grid And Flexbox In Web Design. [online] Webibazaar Templates. Tillgänglig: https://www.webibazaar.com/blog/benefits-of-using-css-grid-and-flexbox-in-web-design/ [2023.11.4].</p>
+<p>Smashing Magazine. (2014). Size Matters: Balancing Line Length And Font Size In Responsive Web Design. [online] Tillgänglig: https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#:~:text=The%20Ideal%20Measure%3A%2045%20To%2075%20Characters%20%23&text=Too%20short%20a%20line%20breaks [2023.11.05].</p>
+
+        </div>
+        </div>
+      </main>
+      <footer class="main">
+        <!-- <div class="footer-sections"> -->
+        <section class="footer-nav">
+          <h2>Menu</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Cakes</a></li>
+            <li><a href="">Cupcakes</a></li>
+            <li><a href="">Cookies</a></li>
+            <li><a href="analys.html">Analys</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">shoping cart logo</a></li>
+          </ul>
+        </section>
+        <section class="footer-contact">
+          <h2>Contact us:</h2>
+
+          <p>
+            <span class="material-symbols-outlined"> mail </span>info@ashter.se
+          </p>
+
+          <p>
+            <span class="material-symbols-outlined"> call </span>073-111 1111
+          </p>
+        </section>
+        <section class="footer-follow">
+          <h2>Follow us on:</h2>
+
+          <p>
+            <img
+              src="images/instagram (1).svg"
+              alt="instagram logo"
+              class="socials-logo"
+            />
+            ashtethomebakery
+          </p>
+          <p>
+            <img
+              src="images/x-twitter.svg"
+              alt="x-twitter logo"
+              class="socials-logo"
+            />
+            ashtethomebakery
+          </p>
+        </section>
+
+        <section class="footer-subscribe">
+          <h2>subscribe to our news Letter to get our best offers!!</h2>
+          <form id="subscribe-form">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </section>
+        <section class="address">
+          <h2>You can find ius in:</h2>
+          <p>Ashtet Bekary</p>
+          <p>Bakerygatan 11</p>
+          <p>123 45 Guthenborg</p>
+        </section>
+        <section class="copy-right">
+          <p>© 2023 Ashtet. All Rights Reserved.</p>
+        </section>
+        <!-- </div> -->
+      </footer>
+    </div>
+  </body>
+</html>
